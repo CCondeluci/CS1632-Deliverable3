@@ -1,3 +1,11 @@
+//Carmen Condeluci and Kofi Osei
+//CS1632 - Prof. Bill Laboon
+//10/27/15
+//Reddit.com Black Box Testing via Selenium WebDriver
+//
+//All test are labled by "feature file # - scenario #",
+//which can be found in our Deliverable-3.docx writeup.
+
 import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +44,7 @@ public class ImagePostsAllTests {
 		selenium.waitForPageToLoad("30000");
 	}
 
+	//Test 2 - a
 	@Test
 	public void A_testSuccessfulImagePost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -62,6 +71,7 @@ public class ImagePostsAllTests {
 		selenium.click("xpath=(//a[contains(text(),'yes')])[2]");
 	}
 	
+	//Test 2 - b
 	@Test
 	public void B_testInvalidTitlePost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -80,6 +90,7 @@ public class ImagePostsAllTests {
 		assertEquals("this is too long (max: 300)", selenium.getText("//div[@id='title-field']/div/div[2]"));
 	}
 	
+	//Test 2 - c
 	@Test
 	public void C_testInvalidCAPTCHA() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -97,6 +108,7 @@ public class ImagePostsAllTests {
 		assertTrue(selenium.getText("//form[@id='newlink']/div/div[8]/div/span").matches("^care to try these again[\\s\\S]$"));
 	}
 	
+	//Test 2 - d
 	@Test
 	public void D_testDuplicateImagePost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -142,6 +154,7 @@ public class ImagePostsAllTests {
 		selenium.click("xpath=(//a[contains(text(),'yes')])[2]");
 	}
 	
+	//Test 2 - e
 	@Test
 	public void E_testSuggestImageTitle() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");

@@ -1,3 +1,11 @@
+//Carmen Condeluci and Kofi Osei
+//CS1632 - Prof. Bill Laboon
+//10/27/15
+//Reddit.com Black Box Testing via Selenium WebDriver
+//
+//All test are labled by "feature file # - scenario #",
+//which can be found in our Deliverable-3.docx writeup.
+
 import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +44,7 @@ public class ManageContributorsAllTests {
 		selenium.waitForPageToLoad("30000");
 	}
 
+	//Test 4 - b
 	@Test
 	public void A_testDeleteContributer() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -52,6 +61,7 @@ public class ManageContributorsAllTests {
 		selenium.click("css=button.btn");
 	}
 	
+	//Test 4 - a
 	@Test
 	public void B_testAddContributer() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -64,6 +74,7 @@ public class ManageContributorsAllTests {
 		assertTrue(selenium.isTextPresent("cs1632_addremove"));
 	}
 	
+	//Test 4 - c
 	@Test
 	public void C_testMessageContributer() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -74,6 +85,7 @@ public class ManageContributorsAllTests {
 		assertTrue(selenium.isTextPresent("send a private message"));
 	}
 	
+	//Test 4 - d
 	@Test
 	public void D_testSearchContributor() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");

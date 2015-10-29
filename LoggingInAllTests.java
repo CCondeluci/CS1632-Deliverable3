@@ -1,3 +1,11 @@
+//Carmen Condeluci and Kofi Osei
+//CS1632 - Prof. Bill Laboon
+//10/27/15
+//Reddit.com Black Box Testing via Selenium WebDriver
+//
+//All test are labled by "feature_file_# - scenario_#",
+//which can be found in our Deliverable-3.docx writeup.
+
 import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -25,6 +33,7 @@ public class LoggingInAllTests {
 		selenium = new WebDriverBackedSelenium(driver, baseUrl);
 	}
 
+	//Test 1 - a
 	@Test
 	public void A_testSuccessfulLogin() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -41,6 +50,7 @@ public class LoggingInAllTests {
 		selenium.click("link=logout");
 	}
 	
+	//Test 1 - b
 	@Test
 	public void testInvalidUsername() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -55,6 +65,7 @@ public class LoggingInAllTests {
 		assertEquals("wrong password", selenium.getText("css=div.tooltip-inner"));
 	}
 	
+	//Test 1 - c
 	@Test
 	public void testInvalidPassword() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -69,6 +80,7 @@ public class LoggingInAllTests {
 		assertEquals("wrong password", selenium.getText("css=div.tooltip-inner"));
 	}
 	
+	//Test 1 - d
 	@Test
 	public void testNoUserAccount() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");

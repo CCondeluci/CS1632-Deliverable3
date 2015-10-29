@@ -1,3 +1,11 @@
+//Carmen Condeluci and Kofi Osei
+//CS1632 - Prof. Bill Laboon
+//10/27/15
+//Reddit.com Black Box Testing via Selenium WebDriver
+//
+//All test are labled by "feature file # - scenario #",
+//which can be found in our Deliverable-3.docx writeup.
+
 import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +44,7 @@ public class ModeratePostsAllTests {
 		selenium.waitForPageToLoad("30000");
 	}
 
+	//Test 5 - a
 	@Test
 	public void A_testStickiedPost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -51,6 +60,7 @@ public class ModeratePostsAllTests {
 		assertTrue(selenium.isElementPresent("css=span.stickied-tagline"));
 	}
 	
+	//Test 5 - b
 	@Test
 	public void B_testUnStickyPost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -66,6 +76,7 @@ public class ModeratePostsAllTests {
 		assertFalse(selenium.isElementPresent("css=span.stickied-tagline"));
 	}
 	
+	//Test 5 - d
 	@Test
 	public void C_testApprovePost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -83,6 +94,7 @@ public class ModeratePostsAllTests {
 		assertTrue(selenium.isTextPresent("approved"));
 	}
 	
+	//Test 5 - c
 	@Test
 	public void D_testRemovePost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -94,6 +106,7 @@ public class ModeratePostsAllTests {
 		assertTrue(selenium.isTextPresent("removed"));
 	}
 	
+	//Test 5 - e
 	@Test
 	public void E_testApproveRemovedPost() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");

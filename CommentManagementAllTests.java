@@ -1,3 +1,11 @@
+//Carmen Condeluci and Kofi Osei
+//CS1632 - Prof. Bill Laboon
+//10/27/15
+//Reddit.com Black Box Testing via Selenium WebDriver
+//
+//All test are labled by "feature file # - scenario #",
+//which can be found in our Deliverable-3.docx writeup.
+
 import com.thoughtworks.selenium.Selenium;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.WebDriver;
@@ -36,6 +44,7 @@ public class CommentManagementAllTests {
 		selenium.waitForPageToLoad("30000");
 	}
 
+	//Test 3 - a
 	@Test
 	public void A_testPostComment() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -48,6 +57,7 @@ public class CommentManagementAllTests {
 		assertTrue(selenium.isTextPresent("test comment for creating a comment"));
 	}
 	
+	//Test 3 - b
 	@Test
 	public void B_testDeleteComment() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -61,6 +71,7 @@ public class CommentManagementAllTests {
 		assertEquals("there doesn't seem to be anything here", selenium.getText("id=noresults"));
 	}
 	
+	//Test 3 - c
 	@Test
 	public void C_testEditComment() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -77,6 +88,7 @@ public class CommentManagementAllTests {
 		Thread.sleep(2000);
 	}
 	
+	//Test 3 - d
 	@Test
 	public void D_testReplyComment() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
@@ -91,6 +103,7 @@ public class CommentManagementAllTests {
 		selenium.click("xpath=(//a[contains(text(),'yes')])[5]");
 	}
 	
+	//Test 3 - e
 	@Test
 	public void E_testSaveComment() throws Exception {
 		selenium.open("/r/cs1632seleniumtestbed/");
